@@ -10,21 +10,19 @@ export default function Home() {
   return (
     <main className="min-h-screen text-gray-800">
       {/* Hero Section */}
-      <section
-  id="home"
-  className="flex flex-col items-center justify-center text-center p-10 pt-36 bg-gradient-to-r from-teal-400 to-blue-600 text-white"
->
-  {/* Add pt-36 or any padding-top value depending on your navbar height */}
-  <h1 className="text-5xl font-bold mb-4 text-center text-gray-800">
-    Welcome
-  </h1>
-  <p className="text-lg mb-6">
-    This is a placeholder for my amazing portfolio. Stay tuned!
-  </p>
-  <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold rounded-lg hover:scale-105 transform transition duration-300">
-    Learn More
-  </button>
-</section>
+          <section
+      id="home"
+      className="flex flex-col items-center justify-center text-center p-6 md:p-10 pt-20 bg-gradient-to-r from-teal-400 to-blue-600 text-white"
+    >
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">Welcome</h1>
+      <p className="text-base md:text-lg mb-6">
+        This is a placeholder for my amazing portfolio. Stay tuned!
+      </p>
+      <button className="px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-semibold rounded-lg hover:scale-105 transform transition duration-300">
+        Learn More
+      </button>
+    </section>
+
 
 
       {/* About and Easter Egg Section */}
