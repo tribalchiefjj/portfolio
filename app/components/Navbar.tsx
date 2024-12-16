@@ -4,6 +4,7 @@ import ThemeToggle from './ThemeToggle'; // Import the ThemeToggle component
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // For mobile menu toggle
 
   const navItems = [
     { name: 'Home', to: 'home' },
@@ -38,8 +39,8 @@ export default function Navbar() {
         {/* Logo or Title */}
         <div className="text-2xl font-bold">My Portfolio</div>
 
-        {/* Navigation Items */}
-        <ul className="flex space-x-6">
+        {/* Navigation Items for Desktop */}
+        <ul className="hidden md:flex space-x-6">
           {navItems.map((item, index) => (
             <li key={index}>
               <Link
@@ -56,6 +57,36 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <span className="text-white">☰</span>
+        </button>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <ul className="md:hidden absolute top-16 left-0 w-full bg-blue-600 py-4 text-center space-y-4">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.to}
+                  smooth={true}
+                  duration={800}
+                  offset={-70}
+                  className={`cursor-pointer hover:underline ${
+                    activeSection === item.to ? 'font-bold text-yellow-400' : ''
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)} // Close menu on item click
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Theme Toggle */}
         <div className="ml-4">
