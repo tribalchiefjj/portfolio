@@ -59,7 +59,7 @@ export default function ContactForm() {
       <div className="container mx-auto max-w-4xl">
         <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-300 mb-10">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-            Have a question or want to work together? Fill out the form below, and I’ll get back to you!
+            Have a question or want to work together? Fill out the form below, and I&apos;ll get back to you! (still under development reach me through the social media platforms listed below for now)
           </h2>
           <form
             onSubmit={handleSubmit}

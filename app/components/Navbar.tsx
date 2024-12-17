@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 import { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
+import ThemeSwitcher from './ThemeSwitcher'; // Import the ThemeSwitcher component
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
@@ -34,7 +34,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-blue-600 text-white py-4 fixed w-full z-50 shadow-lg">
+    <nav className="bg-blue-600 dark:bg-gray-800 text-white py-4 fixed w-full z-50 shadow-lg transition-colors duration-300">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
         {/* Logo or Title */}
         <div className="text-2xl font-bold mb-2 md:mb-0 text-center w-full md:w-auto">
@@ -72,11 +72,10 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-
-          {/* Theme Toggle */}
-          <div className="mt-2 md:mt-0">
-            <ThemeToggle />
-          </div>
+          {/* Theme Switcher */}
+          <li>
+            <ThemeSwitcher />
+          </li>
         </ul>
       </div>
     </nav>

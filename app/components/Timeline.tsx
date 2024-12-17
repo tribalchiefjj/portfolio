@@ -1,4 +1,3 @@
-// components/Timeline.tsx
 import React from 'react';
 import { FaRocket, FaLaptopCode } from 'react-icons/fa'; // You can use icons
 
@@ -17,15 +16,15 @@ const Timeline = () => {
       icon: <FaLaptopCode />,
     },
     {
-      year: "To Date",
+      year: "...To Date",
       title: "I am Who I Think I Am (The Greatest Of All Time(or NOT🤣))",
       description: "i did put my heart and my soul into my work and oh boy did i lose my mind in the process.",
       icon: <FaRocket />,
     },
     {
       year: "",
-      title: "tha was just a brief thing , download my cv below..resume will be updated...",
-      description: "will be updated",
+      title: "that was just a brief thing ,still under construction download my cv below.. will be updated...",
+      description: "stay with me ",
       icon: <FaRocket />,
     },
     // Add more milestones as needed

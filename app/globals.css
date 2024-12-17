@@ -3,32 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light mode colors (default) */
+/* Custom CSS variables for light mode */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* Dark mode overrides */
+/* Dark mode overrides (controlled by `next-themes`) */
 .dark {
   --background: #121212;
   --foreground: #f4f4f4;
 }
 
-/* Prefer dark mode based on system settings */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* Apply the colors to the body */
+/* Apply the variables to body */
 body {
   color: var(--foreground);
   background-color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Optional: You can add more Tailwind-based custom classes for further styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}

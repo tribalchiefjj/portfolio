@@ -1,23 +1,26 @@
 'use client';
 
-import './globals.css'; // Ensure global styles are imported
-import 'aos/dist/aos.css'; // Import AOS styles
-import AOS from 'aos'; // Import AOS library
+import './globals.css';
+import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import Navbar from './components/Navbar'; // Import your Navbar component
+import { ThemeProvider } from 'next-themes';
+import AOS from 'aos';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    AOS.init(); // Initialize AOS animations
+    AOS.init();
   }, []);
 
   return (
-    <html lang="en">
-      <head />
-      <body className="bg-gray-50">
-        <Navbar /> {/* Add the Navbar here */}
-        <main className="flex-grow">{children}</main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className="transition-colors duration-300 bg-white dark:bg-gray-900">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
