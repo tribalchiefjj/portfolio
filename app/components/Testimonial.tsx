@@ -15,7 +15,7 @@ const testimonials: Testimonial[] = [
     role: 'software dev, ',
     company: 'SWahilipot hub foundation',
     text: 'Working with Jafar was a pleasure. His problem-solving skills and creativity are outstanding.',
-    image: '/images/testimonial1.png', 
+    image: '/images/testimonial1.jpeg', 
   },
   {
     name: 'Tribalchiefjj',
