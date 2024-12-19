@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 import { useState, useEffect } from 'react';
-import ThemeSwitcher from './ThemeSwitcher'; // Import the ThemeSwitcher component
+import ThemeSwitcher from './ThemeSwitcher'; 
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('home');
@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: 'Projects', to: 'projects' },
     { name: 'Contact', to: 'contact' },
   ];
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,7 @@ export default function Navbar() {
       const offsets = sections.map(
         (id) => document.getElementById(id)?.offsetTop ?? 0
       );
+
 
       for (let i = sections.length - 1; i >= 0; i--) {
         if (scrollPosition >= offsets[i] - 80) {
@@ -38,7 +40,7 @@ export default function Navbar() {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
         {/* Logo or Title */}
         <div className="text-2xl font-bold mb-2 md:mb-0 text-center w-full md:w-auto">
-          My Portfolio
+          The Tribalchief 
         </div>
 
         {/* Menu Icon for Mobile */}

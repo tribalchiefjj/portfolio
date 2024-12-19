@@ -2,9 +2,10 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
-import TestimonialSection from './components/Testimonial'; // Import Testimonial Section
+import TestimonialSection from './components/Testimonial'; 
 import EasterEgg from './components/EasterEgg';
-import Timeline from './components/Timeline'; // Import the Timeline Component
+import Timeline from './components/Timeline'; 
+import TechStack from './components/TechStack'; 
 
 export default function Home() {
   return (
@@ -35,6 +36,34 @@ export default function Home() {
           {/* Easter Egg Section */}
           <div className="w-full md:w-1/2 p-4 text-center">
             <EasterEgg />
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack and Dynamic Stats Section */}
+      <section id="tech-stack-stats" className="bg-gradient-to-b from-blue-50 to-gray-100 py-16 px-8">
+        <div className="container mx-auto max-w-6xl flex flex-col md:flex-row gap-12">
+          {/* Tech Stack Section */}
+          <div className="flex-1 w-full md:w-1/2">
+            <TechStack />
+          </div>
+
+          {/* Dynamic Stats Section */}
+          <div className="flex-1 w-full md:w-1/2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10 animate__animated animate__fadeInUp">
+              <div className="p-6 bg-white shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 className="text-2xl font-bold text-blue-600">10+</h3>
+                <p className="text-gray-600">Projects Completed</p>
+              </div>
+              <div className="p-6 bg-white shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 className="text-2xl font-bold text-green-600">5,000+</h3>
+                <p className="text-gray-600">Cups of Coffee</p>
+              </div>
+              <div className="p-6 bg-white shadow-md rounded-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 className="text-2xl font-bold text-teal-600">∞</h3>
+                <p className="text-gray-600">Lines of Code</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

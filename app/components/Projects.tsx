@@ -4,9 +4,9 @@ export default function Projects() {
       {
         title: 'Fursa mobile app ',
         description: 'An android mobile app that helps youth in whether its job, interns, bussiness, any opportunity.',
-        image: '/images/project1.png', // Replace with your image path
+        image: '/images/project1.png', 
         tags: ['react naive ', 'expo go', 'youths', 'API'],
-        link: 'https://github.com/tribalchiefjj/Fursa-App', // GitHub or live demo link
+        link: 'https://github.com/tribalchiefjj/Fursa-App', 
       },
       {
         title: 'Project Two',

@@ -6,25 +6,24 @@ interface Testimonial {
   role: string;
   company: string;
   text: string;
-  image: string; // Path to image (optional)
+  image: string; 
 }
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Tribalchief',
-    role: 'CEO, Example Corp',
-    company: 'Example Corp',
-    text: 'Jafar is an exceptional software engineer. His attention to detail and dedication are unmatched!',
-    image: '/images/testimonial1.png', // Optional image
+    name: 'patrick mwangi',
+    role: 'software dev, ',
+    company: 'SWahilipot hub foundation',
+    text: 'Working with Jafar was a pleasure. His problem-solving skills and creativity are outstanding.',
+    image: '/images/testimonial1.png', 
   },
   {
     name: 'Tribalchiefjj',
     role: 'Lead Developer, Tech Solutions',
     company: 'Tech Solutions',
     text: 'Working with Jafar was a pleasure. His problem-solving skills and creativity are outstanding.',
-    image: '/images/testimonial2.png', // Optional image
+    image: '/images/testimonial2.png', 
   },
-  // Add more testimonials as needed
 ];
 
 const TestimonialSection: React.FC = () => {
@@ -47,8 +46,8 @@ const TestimonialSection: React.FC = () => {
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    width={48} // Adjusted to match `w-12`
-                    height={48} // Adjusted to match `h-12`
+                    width={48} 
+                    height={48} 
                     className="rounded-full mr-4"
                   />
                 )}

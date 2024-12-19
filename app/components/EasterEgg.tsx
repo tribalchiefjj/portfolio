@@ -18,7 +18,7 @@ const EasterEgg: React.FC = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Secret Input Box */}
         <h2 className="text-3xl font-bold text-gray-800 mb-4">
-          Can you find the secret phrase?😃🙃
+          Can you find the secret phrase?😃🙃 hint (the c...)
         </h2>
         <input
           type="text"

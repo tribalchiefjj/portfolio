@@ -9,8 +9,8 @@ const ResumeDownload: React.FC = () => {
           Feel free to download my resume if you&quot;d like to learn more about my experience and skills.
         </p>
         <a
-          href="/resume.pdf" // Link to your resume file in the public directory
-          download="Jafar_Resume" // Optional: Customize the name of the downloaded file
+          href="/resume.pdf" 
+          download="Jafar_Resume" 
           className="bg-blue-600 text-white py-1 px-4 rounded-md text-sm hover:bg-blue-700 transition"
         >
           Download Resume

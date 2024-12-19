@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRocket, FaLaptopCode } from 'react-icons/fa'; // You can use icons
+import { FaRocket, FaLaptopCode } from 'react-icons/fa'; 
 
 const Timeline = () => {
   const events = [
@@ -27,7 +27,6 @@ const Timeline = () => {
       description: "stay with me ",
       icon: <FaRocket />,
     },
-    // Add more milestones as needed
   ];
 
   return (
