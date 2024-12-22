@@ -40,8 +40,7 @@ export default function Navbar() {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
         {/* Logo or Title */}
         <div className="text-2xl font-bold mb-2 md:mb-0 text-center w-full md:w-auto">
-          The Tribalchief 
-        </div>
+        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ        </div>
 
         {/* Menu Icon for Mobile */}
         <div className="md:hidden absolute right-4 top-4">

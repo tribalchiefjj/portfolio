@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -7,7 +7,7 @@ export default function About() {
   const [headingText, setHeadingText] = useState(""); // Set initial state as an empty string
   const [isModalOpen, setModalOpen] = useState(false); // State for modal open/close
 
-  const fullHeading = "Who's Jafar? 🤔"; // The full text to type
+  const fullHeading = "  بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ "; // The full text to type
 
   useEffect(() => {
     let i = 0;
@@ -37,10 +37,16 @@ export default function About() {
   const handleModal = () => setModalOpen((prev) => !prev);
 
   return (
-    <section id="about" className="bg-gradient-to-b from-blue-50 to-gray-100 py-16 px-8">
+    <section id="about" className="bg-gradient-to-b from-blue-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 py-16 px-8">
       <div className="container mx-auto max-w-5xl text-center">
         {/* Dynamically typed heading */}
-        <h2 className="text-4xl font-extrabold text-blue-600 mb-6">{headingText}</h2>
+        <h2
+          className="text-4xl font-extrabold text-blue-600 dark:text-teal-400 mb-6"
+          role="heading"
+          aria-level={2} // Fixed type issue
+        >
+          {headingText}
+        </h2>
 
         {/* Profile Image */}
         <div className="relative mx-auto w-40 h-40 mb-6">
@@ -55,9 +61,9 @@ export default function About() {
 
         {/* About Me Paragraph */}
         <div className="overflow-y-auto max-h-60 px-4 md:px-0 mb-6">
-          <p className="text-lg text-gray-800">
-            Hello! I&apos;m <span className="font-bold text-teal-600">Jafar</span>, but you know some people can&apos;t seem to control themselves from calling me
-            <span className="font-bold text-blue-500"> &quot;The Codefather&quot; 🕶️</span>.
+          <p className="text-lg text-gray-800 dark:text-gray-200">
+            Hello! I&apos;m <span className="font-bold text-teal-600 dark:text-teal-400">Jafar</span>, but you know some people can&apos;t seem to control themselves from calling me
+            <span className="font-bold text-blue-500 dark:text-blue-300"> &quot;The Codefather&quot; 🕶️</span>.
             Probably because I make offers no bugs can refuse and also Googling &quot;how to exit Vim.&quot;🤣 I spend my days writing code (ctrl C, V), refactoring it, and then convincing myself it was genius all along.
             Ahh, hobbies? Well, they include fixing one bug and accidentally creating three more, pretending I understand recursion, and wondering why semicolons exist.
             I&apos;m always learning because, let&apos;s face it, the tech world evolves faster than my Wi-Fi speed (1mbps or 2). Stick around—there&apos;s a 99.9% chance I&apos;ll deploy something cool, and a 0.1% chance I&apos;ll break everything. 🚀
@@ -69,7 +75,7 @@ export default function About() {
         <div className="mt-10 animate__animated animate__fadeInUp">
           <button
             onClick={handleModal}
-            className="px-8 py-3 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+            className="px-8 py-3 text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
           >
             Let&apos;s Connect
           </button>
@@ -79,36 +85,38 @@ export default function About() {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 dark:bg-opacity-75 z-50"
           onClick={handleModal} // Close modal when clicking outside
         >
           <div
-            className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg relative"
+            className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-lg relative"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
           >
             {/* Modal Header */}
-            <h3 className="text-xl font-bold text-blue-600 mb-4">Contact Me(<span className="font-bold text-teal-400">under construction, reach me through social media platforms listed on the footer for now</span>,)</h3>
+            <h3 className="text-xl font-bold text-blue-600 dark:text-teal-400 mb-4">
+              Contact Me (<span className="font-bold text-teal-400 dark:text-teal-300">under construction, reach me through social media platforms listed on the footer for now</span>)
+            </h3>
 
             {/* Modal Form */}
             <form>
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
               />
               <textarea
                 placeholder="Your Message"
-                className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-teal-500 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600"
                 rows={4}
               ></textarea>
               <button
                 type="submit"
-                className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                className="w-full py-2 bg-blue-600 dark:bg-teal-500 text-white rounded hover:bg-blue-700 dark:hover:bg-teal-600 transition-colors"
               >
                 Send Message
               </button>
@@ -117,7 +125,7 @@ export default function About() {
             {/* Close Modal Button */}
             <button
               onClick={handleModal}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
             >
               ✖
             </button>

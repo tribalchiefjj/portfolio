@@ -55,18 +55,18 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-r from-blue-500 to-teal-400 py-16 px-8">
+    <section id="contact" className="py-16 px-8 bg-gradient-to-r from-blue-500 to-teal-400 dark:bg-gradient-to-r dark:from-blue-700 dark:to-teal-600">
       <div className="container mx-auto max-w-4xl">
-        <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-300 mb-10">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-            Have a question or want to work together? Fill out the form below, and I&apos;ll get back to you! (still under development reach me through the social media platforms listed below for now)
+        <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-300 dark:bg-gray-800 dark:border-gray-600 mb-10">
+          <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">
+            Have a question or want to work together? Fill out the form below, and I&apos;ll get back to you! (still under development, reach me through the social media platforms listed below for now)
           </h2>
           <form
             onSubmit={handleSubmit}
-            className="max-w-md mx-auto p-6 rounded-xl shadow-lg border-2 border-gray-300 transform transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            className="max-w-md mx-auto p-6 rounded-xl shadow-lg border-2 border-gray-300 dark:bg-gray-700 dark:border-gray-600 transform transition-all duration-300 hover:shadow-2xl hover:scale-105"
           >
             <div className="mb-5">
-              <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="name" className="block text-gray-700 font-medium mb-2 dark:text-gray-300">
                 Name
               </label>
               <input
@@ -76,11 +76,11 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all transform duration-300 ease-in-out hover:scale-105"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all transform duration-300 ease-in-out hover:scale-105 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-100 dark:focus:ring-blue-400"
               />
             </div>
             <div className="mb-5">
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="email" className="block text-gray-700 font-medium mb-2 dark:text-gray-300">
                 Email
               </label>
               <input
@@ -90,11 +90,11 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all transform duration-300 ease-in-out hover:scale-105"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all transform duration-300 ease-in-out hover:scale-105 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-100 dark:focus:ring-blue-400"
               />
             </div>
             <div className="mb-5">
-              <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+              <label htmlFor="message" className="block text-gray-700 font-medium mb-2 dark:text-gray-300">
                 Message
               </label>
               <textarea
@@ -104,7 +104,7 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={4}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all transform duration-300 ease-in-out hover:scale-105"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all transform duration-300 ease-in-out hover:scale-105 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-100 dark:focus:ring-blue-400"
               />
             </div>
             <div className="flex justify-center">
@@ -138,9 +138,9 @@ export default function ContactForm() {
           </form>
         </div>
         {/* Resume Download Section */}
-        <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-300 mb-10">
-          <h2 className="text-xl font-bold text-center text-gray-800 mb-6">Download My Resume</h2>
-          <p className="text-gray-600 text-center mb-4">
+        <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-300 dark:bg-gray-800 dark:border-gray-600 mb-10">
+          <h2 className="text-xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6">Download My Resume</h2>
+          <p className="text-gray-600 text-center mb-4 dark:text-gray-300">
             Feel free to download my resume to learn more about my experience and skills.
           </p>
           <div className="flex justify-center items-center">
